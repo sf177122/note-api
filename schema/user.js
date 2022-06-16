@@ -13,6 +13,8 @@ const password = joi
   .required();
 
 const user_pic = joi.string().dataUri().required()
+
+const page=joi.string().required()
 exports.login_schema = {
   body: {
     username,
@@ -27,3 +29,9 @@ exports.reg_schema = {
     user_pic
   },
 };
+
+exports.getupLoadPage_schema = {
+  body: {
+    page
+  }
+}
